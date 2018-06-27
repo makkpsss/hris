@@ -1,3 +1,5 @@
+"use strict";
+
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const path = require("path");
 
@@ -8,7 +10,7 @@ const htmlPlugin = new HtmlWebPackPlugin({
 });
 
 module.exports = {
-    entry: "./src/index.js",
+    entry: "./src/index.jsx",
     output: {
         path: path.resolve("build"),
         filename: "bundle.js"
@@ -16,7 +18,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.jsx?$/,
                 exclude: ["/node_modules/","/server/"],
                 use: {
                     loader: "babel-loader"
@@ -39,6 +41,9 @@ module.exports = {
                 ]
             }
         ]
+    },
+    resolve: {
+        extensions: [".js",".jsx"]
     },
     plugins: [htmlPlugin]
 };
