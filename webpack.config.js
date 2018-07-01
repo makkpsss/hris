@@ -18,6 +18,15 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.(png|jpg|gif)$/,
+                use: [
+                    {
+                        loader: "file-loader",
+                        options: {}
+                    }
+                ]
+            },
+            {
                 test: /\.jsx?$/,
                 exclude: ["/node_modules/","/server/"],
                 use: {
@@ -45,5 +54,8 @@ module.exports = {
     resolve: {
         extensions: [".js",".jsx"]
     },
-    plugins: [htmlPlugin]
+    plugins: [htmlPlugin],
+    devServer: {
+        overlay: true
+    }
 };

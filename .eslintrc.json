@@ -33,6 +33,10 @@
             "error",
             "always"
         ],
-        "no-console": "warn"
+        "no-console": "warn",
+        "react/jsx-no-bind": "ignore",
+        "react/jsx-max-depth": ["warn",{"max": 3}],
+        "react/forbid-component-props": "ignore",
+        "react/jsx-handler-names": "warn"
     }
 }
