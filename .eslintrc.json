@@ -5,7 +5,8 @@
         "es6": true,
         "node": true
     },
-    "extends": ["eslint:recommended", "plugin:react/all"],
+    "parser": "babel-eslint",
+    "extends": ["standard","eslint:recommended", "plugin:react/all"],
     "parserOptions": {
         "ecmaFeatures": {
             "jsx": true
@@ -14,9 +15,11 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "prettier"
     ],
     "rules": {
+        "prettier/prettier": 1,
         "indent": [
             "error",
             4
@@ -33,10 +36,12 @@
             "error",
             "always"
         ],
-        "no-console": "warn",
-        "react/jsx-no-bind": "ignore",
-        "react/jsx-max-depth": ["warn",{"max": 3}],
-        "react/forbid-component-props": "ignore",
-        "react/jsx-handler-names": "warn"
+        "no-console": 1,
+        "react/jsx-no-bind": 0,
+        "react/jsx-max-depth": [1,{"max": 3}],
+        "react/forbid-component-props": 0,
+        "react/jsx-handler-names": 1,
+        "react/jsx-one-expression-per-line": 0,
+        "react/jsx-max-props-per-line":[1,{"max": 3}]
     }
 }

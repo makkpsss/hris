@@ -1,10 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Fabric } from "office-ui-fabric-react/lib/Fabric";
 import App from "./App";
 
 const Index = () => {
     return(
-        <App />
+        <Fabric><App /></Fabric>
     );
 };
 
