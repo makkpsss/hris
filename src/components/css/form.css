@@ -8,4 +8,17 @@
 
 .login-btn{
     float: right;
+    margin-top: 10px;
+}
+
+.login-form-wrap{
+    float: right;
+}
+
+.page-title{
+    font-size: 82px;
+    background-color:#3f52e3;
+    color: white;
+    font-weight: 100;
+    padding: 10px 0px 10px 5px;
 }

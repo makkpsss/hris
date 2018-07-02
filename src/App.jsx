@@ -1,8 +1,8 @@
 import React from "react";
-import LoginForm from "./components/LoginForm";
+import LoginPage from "./components/pages/LoginPage";
 
 const App = () => {
-    return <LoginForm err_login="" err_passwd="" />;
+    return <LoginPage />;
 };
 
 export default App;

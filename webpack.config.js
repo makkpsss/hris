@@ -49,7 +49,8 @@ module.exports = {
                             localIdentName: "[name]_[local]_[hash:base64]",
                             sourceMap: true,
                             minimize: true,
-                            camelCase: true
+                            camelCase: true,
+                            convertToAbsoluteUrls: true
                         }
                     }
                 ]
