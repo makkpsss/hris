@@ -8,6 +8,12 @@ Created a basic template of Application with the stack of the following
 - [**ExpressJS**](https://expressjs.com/) ( Backend )
 - [**Mongo DB**](https://www.mongodb.com/) ( Database )
 
+## Configuration
+
+* Typechecking using ESLint
+* Prettier for code formatting
+* Emmet for code
+
 ## Commands
 
 Run the following command to test out the application

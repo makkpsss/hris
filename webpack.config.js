@@ -17,6 +17,7 @@ module.exports = {
     },
     module: {
         rules: [
+            // File loader configuration
             {
                 test: /\.(png|jpg|gif)$/,
                 use: [
@@ -26,9 +27,10 @@ module.exports = {
                     }
                 ]
             },
+            // Babel Transpiler configuration
             {
                 test: /\.jsx?$/,
-                exclude: ["/node_modules/","/server/"],
+                exclude: ["/node_modules/", "/server/"],
                 use: {
                     loader: "babel-loader"
                 }
@@ -36,7 +38,9 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: [
-                    { loader: "style-loader" },
+                    {
+                        loader: "style-loader"
+                    },
                     {
                         loader: "css-loader",
                         options: {
@@ -45,7 +49,7 @@ module.exports = {
                             localIdentName: "[name]_[local]_[hash:base64]",
                             sourceMap: true,
                             minimize: true,
-                            camelCase: true,
+                            camelCase: true
                         }
                     }
                 ]
@@ -53,7 +57,7 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: [".js",".jsx"]
+        extensions: [".js", ".jsx"]
     },
     plugins: [htmlPlugin],
     devServer: {

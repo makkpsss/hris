@@ -5,10 +5,17 @@ import { TextField } from "office-ui-fabric-react/lib/TextField";
 import { marginAroundBtn, marginAroundInput, loginBtn } from "./css/form.css";
 
 export default class LoginForm extends Component {
+    static propTypes = {
+        /** Print if there is a username error "err_login". */
+        err_login: PropTypes.string,
+        /** Print if there is a password error "err_passwd". */
+        err_passwd: PropTypes.string
+    };
+
     componentDidCatch = (err, info) => {
         console.log({ LoginForm: "Error at LoginForm" });
-        console.error({ err });
-        console.info({ info });
+        console.error({ err: err });
+        console.info({ info: info });
     };
 
     render() {
@@ -35,7 +42,7 @@ export default class LoginForm extends Component {
                     />
                     <PrimaryButton
                         about="Click to verify 🙏"
-                        className={ marginAroundBtn, loginBtn }
+                        className={(marginAroundBtn, loginBtn)}
                         type="submit"
                         value="Login"
                     >
@@ -46,8 +53,3 @@ export default class LoginForm extends Component {
         );
     }
 }
-
-LoginForm.propTypes = {
-    err_login: PropTypes.string.isRequired,
-    err_passwd: PropTypes.string.isRequired,
-};
