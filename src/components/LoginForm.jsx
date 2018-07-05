@@ -40,7 +40,7 @@ export default class LoginForm extends Component {
                         errorMessage={err_passwd}
                         label="Password"
                         name="password"
-                        placeholder="myS@fEP@$$wd"
+                        placeholder="Your Password"
                         required
                         type="password"
                     />
